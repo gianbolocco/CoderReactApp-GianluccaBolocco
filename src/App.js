@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.scss';
-
-import * as React from 'react';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
+import Header from '../src/components/Header/Header'
+import ListProducts from './components/ListProducts/ListProducts';
 
 
 
@@ -15,8 +14,9 @@ function App() {
     <div className="App">
     
      <NavBar/>
+     <Header/>
+     <ListProducts/>
 
-    <div className='header'></div>
     </div>
 
   );

@@ -1,11 +1,11 @@
-import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import '../NavBar/NavBar.css';
 
 
 function NavBar(){
@@ -13,7 +13,7 @@ function NavBar(){
 
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="fixed">
-                <Toolbar>
+                <Toolbar className='NavBar'>
                     <IconButton
                     size="large"
                     edge="start"
@@ -25,11 +25,14 @@ function NavBar(){
                     </IconButton>
                     <img className='logo' src="logo192.png"/>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    ReactApp
+                    SneakerShop
                     </Typography>
-                    <Button color="inherit">Productos</Button>
+                    <ShoppingCartIcon/>
+                    <p>0</p>
                 </Toolbar>
             </AppBar>
+
+            {/* <ListProducts/> */}
         </Box>
         
     );

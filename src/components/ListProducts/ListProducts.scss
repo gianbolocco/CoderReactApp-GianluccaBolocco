@@ -1,0 +1,19 @@
+.container-cards{
+    background-color: #EEEDDE;
+    display: flex;
+    flex-direction: column;
+
+    .Card{
+        height: 250px;
+        width: 250px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+        margin: 20px auto;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #E0DDAA;
+    }
+}
