@@ -1,17 +1,54 @@
-import '../Card/Card.scss'
+import React from "react"
+import ItemCount from "../Card/ItemCount"
+
+
+// const Products = [
+//     {
+//         title: "Forum",
+//         stock: 432,
+//         price: 120,
+//         brand: "adidas"
+//     },
+//     {
+//         title: "Melo",
+//         stock: 543,
+//         price: 80,
+//         brand: "Puma"
+//     },
+//     {
+//         title: "AirMax",
+//         stock: 903,
+//         price: 150,
+//         brand: "Nike"
+//     },
+//     {
+//         title: "AirForce",
+//         stock: 64,
+//         price: 90,
+//         brand: "Nike"
+//     }
+// ]
+
+
+
 
 export default function Card(props){
-    console.log("precio ", props.price)
-    console.log("talle ", props.size)
-    console.log("titulo ", props.title)
+
+    const {price, size, title, img, stock} = props;
+    console.log("precio ", price)
+    console.log("talle ", size)
+    console.log("titulo ", title)
+    console.log("titulo ", img)
+
+
 
     return(
         <div className='Card'>
-
-            <h2>{props.title}</h2>
-            <p>precio : ${props.price}</p>
-            <p>talle : {props.size}</p>
-            <button>Comprar</button>
+            <img src={img}/>
+            <h2>{title}</h2>
+            <p>precio : ${price}</p>
+            <p>talle : {size}</p>
+            <ItemCount stock={stock} initial={1}/>
 
         </div>
     )
