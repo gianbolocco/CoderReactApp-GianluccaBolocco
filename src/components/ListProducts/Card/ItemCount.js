@@ -15,7 +15,7 @@ const ItemCount = ({stock, initial}) => {
         }
     }
     const onAdd = () => {
-        console.log(`Agregaste ${(count)} productos al carrito.`) 
+        alert(`Agregaste ${(count)} productos al carrito.`) 
     }
 
     return(
@@ -25,7 +25,7 @@ const ItemCount = ({stock, initial}) => {
             <p>{count}</p>
             <Button variant="outlined" onClick={countPlus} >+</Button>
             </div>
-            <Button variant="contained" onClick={onAdd}>Agregar</Button>
+            <Button className='addToCart' variant="contained" onClick={onAdd}>Agregar</Button>
         </div>
         
     )

@@ -4,7 +4,9 @@ const Header = () => {
      
     return(
 
-        <div className='header'></div>
+        <div className='header'>
+            <img src='sneakerlogo.svg'/>
+        </div>
 
     );
 

@@ -1,40 +1,10 @@
-import React from "react"
+import React,{useState, useEffect} from "react"
 import ItemCount from "../Card/ItemCount"
 
 
-// const Products = [
-//     {
-//         title: "Forum",
-//         stock: 432,
-//         price: 120,
-//         brand: "adidas"
-//     },
-//     {
-//         title: "Melo",
-//         stock: 543,
-//         price: 80,
-//         brand: "Puma"
-//     },
-//     {
-//         title: "AirMax",
-//         stock: 903,
-//         price: 150,
-//         brand: "Nike"
-//     },
-//     {
-//         title: "AirForce",
-//         stock: 64,
-//         price: 90,
-//         brand: "Nike"
-//     }
-// ]
+export default function Card({data}){
 
-
-
-
-export default function Card(props){
-
-    const {price, size, title, img, stock} = props;
+    const {price, size, title, img, stock, brand} = data;
     console.log("precio ", price)
     console.log("talle ", size)
     console.log("titulo ", title)
@@ -46,8 +16,12 @@ export default function Card(props){
         <div className='Card'>
             <img src={img}/>
             <h2>{title}</h2>
-            <p>precio : ${price}</p>
-            <p>talle : {size}</p>
+            <ul>
+                <li>talle : {size}</li>
+                <li>precio : ${price}</li>
+                <li>marca : {brand}</li>
+                <li>stock  : {stock}</li>
+            </ul>
             <ItemCount stock={stock} initial={1}/>
 
         </div>
