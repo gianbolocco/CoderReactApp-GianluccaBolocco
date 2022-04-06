@@ -1,9 +1,8 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
 function CartIcon(){
     return(
 
-        <ShoppingCartIcon/>
+        <ShoppingCartIcon className='Cart'/>
 
     )
 }

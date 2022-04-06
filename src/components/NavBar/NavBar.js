@@ -1,20 +1,41 @@
 import CartIcon from '../ShoppingCart/ShoppingCart'
-
+import { Link } from 'react-router-dom'
 import '../NavBar/NavBar.css';
 
 
 
-function NavBar(){
+function NavBar(props){
+
+    const pages = [
+        {
+            title:'Home',
+            url: '/'
+        },
+        {
+            title:'AboutUs',
+            url: '/AboutUs'
+        }, 
+        {
+            title: 'Productos',
+            url: '/productos'
+        },
+        {
+            title: 'FAQ',
+            url: '/FAQ'
+        }]
+
     return(
 
-
         <div className='nav'>
-            <img src='sneakerlogo.svg'/>
+            <img src='sneakerlogo.svg' alt='sneaker'/>
             <ul>
-                <li>HOME</li>
-                <li>PRODUCTOS</li>
-                <li>NOSOTROS</li>
-                <li>CONTACTO</li>
+            {pages.map((page) => {
+                    return(
+                        <li>
+                            <Link className='NavBtn' to={page.url}>{page.title}</Link>
+                        </li>
+                    )
+                })}
             </ul>
             <div className='cartContainer'>
                 <CartIcon/>
